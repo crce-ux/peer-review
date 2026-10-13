@@ -42,6 +42,9 @@
 
 ## 范例
 
+> 下列范例取自精神医学，但**要学的是结构**（三件套 = 问题 + 理由 + 可执行建议；点名 + 数字核对），
+> 与领域无关——换成你自己的领域照做即可。
+
 ### Summary（英文）
 
 > *"In this single-center study, the authors examined whether [exposure/predictor] is associated with [outcome] in [N] patients with [population]. They report [main findings]. The study addresses a clinically relevant question, and the [data/design] is generally [strength]. However, I have several major concerns regarding [X and Y] that need to be addressed before the conclusions can be considered robust."*
