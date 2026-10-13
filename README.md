@@ -1,5 +1,8 @@
 # peer-review
 
+[![Structure](https://github.com/crce-ux/peer-review/actions/workflows/structure.yml/badge.svg)](https://github.com/crce-ux/peer-review/actions/workflows/structure.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **期刊同行评议的完整流程**——从决定是否接受邀请，到写出可辩护的审稿意见。
 
 ---
