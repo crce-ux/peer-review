@@ -7,6 +7,8 @@
 | 脚本 | 干什么 | 服务于 |
 |---|---|---|
 | `check_review.py` | 审稿意见结构机检：审稿建议四档 / 摘要段 / 编号意见 3–8 条 / 每条带位置与要求 / 不端指控不得给作者看 / 密评节须标「不向作者展示」 | §三 意见的结构 · §五 伦理边界 |
+| `check_skill_structure.py` | 结构校验（官方 Agent Skills 规范）：name / description / 正文长度 / 深链 / **声明落地** |
+| `selfcheck.py` | **一条命令自检**：结构 + 语法 + 依赖。见下 |
 
 ## 查哪种体例
 
@@ -34,3 +36,13 @@
 python scripts/check_review.py <审稿意见.md>
 python scripts/check_review.py <期刊审稿/目录>     # 目录模式
 ```
+
+## 自检
+
+```bash
+python scripts/selfcheck.py            # 结构 + 语法 + 依赖
+python scripts/selfcheck.py --strict   # 结构警告也算失败（CI 用这个）
+```
+
+查三样：**结构**（官方规范）· **语法**（逐个编译 `scripts/*.py`）· **依赖**（哪些脚本要装第三方库，只报不判）。
+下载本 skill 后想确认「东西是齐的、没坏的」，跑这一条就够。
