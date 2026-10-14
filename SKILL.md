@@ -147,9 +147,19 @@ MINOR POINTS（列表式，逐条短句）
 
 | 脚本 | 干什么 |
 |---|---|
+| `scripts/manuscript_triage.py` | **读稿工具**：按研究设计（RCT / 观察性 / 诊断 / 预测）核对核心报告条目在不在。**把「写了没有」一次列出来，人再去看「写得对不对」** |
 | `scripts/check_review.py` | 意见结构机检——上面五条**公共不变量**逐条查 |
 
-**它只查该有的东西在不在，不查意见对不对。** 方法学判断准不准、这条批评站不站得住——语义，人工过。
+```bash
+python scripts/manuscript_triage.py 稿件.md            # 自动猜设计类型
+python scripts/manuscript_triage.py 稿件.md --type rct # 或指定
+```
+
+> ⚠️ `manuscript_triage.py` 是**读稿工具，退出码恒为 0**——不是门禁。
+> 它只做**存在性**判断。**「未采用盲法」算报告了**：报告状态本身就是要求。
+> ⭐ **「对不对」和「有没有写」是两件事**——缺一项不等于硬伤，查到了也不等于对。
+
+**两个脚本都只查该有的东西在不在，不查意见对不对。** 方法学判断准不准、这条批评站不站得住——语义，人工过。
 
 草稿（含「备忘录 / 勿提交」）、密评（自述「不向作者展示」）、非审稿意见文件会自动跳过，**并打印跳过原因**。
 
@@ -167,6 +177,7 @@ python scripts/check_review.py <审稿意见.md>
 | `references/writing-review.md` | 意见写法、评分档位、中英文范例、给编辑的保密意见 |
 | `references/domain-checklists.md` | **领域核查五层轴 + 报告规范速查 + 三份样例** |
 | `references/ethics.md` | COPE 义务、诚信红线、常见陷阱、提交前 60 秒自查 |
+| `references/examples.md` | **正反样例**：一份完整意见（坏 vs 好，同一篇稿同一结论）、单条意见五组对照、给编辑的保密意见对照 |
 
 ---
 

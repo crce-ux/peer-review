@@ -6,6 +6,7 @@
 
 | 脚本 | 干什么 | 服务于 |
 |---|---|---|
+| `manuscript_triage.py` | **读稿工具**：按研究设计核对核心报告条目在不在（CONSORT / STROBE / STARD / TRIPOD）。**只查「有没有写」，不查「写得对不对」**；退出码恒为 0 | §二 三遍阅读法 · §四 领域核查 |
 | `check_review.py` | 审稿意见结构机检：审稿建议四档 / 摘要段 / 编号意见 3–8 条 / 每条带位置与要求 / 不端指控不得给作者看 / 密评节须标「不向作者展示」 | §三 意见的结构 · §五 伦理边界 |
 | `check_skill_structure.py` | 结构校验（官方 Agent Skills 规范）：name / description / 正文长度 / 深链 / **声明落地** |
 | `selfcheck.py` | **一条命令自检**：结构 + 语法 + 依赖。见下 |
@@ -32,9 +33,15 @@
 
 它查**该有的东西在不在**，不查**意见对不对**——方法学判断准不准、这条批评站不站得住，一律语义，必须人工过。
 
+`manuscript_triage.py` 另守住一条：⭐ **「对不对」和「有没有写」是两件事。**
+它只做存在性判断——**「未采用盲法」算报告了**，因为报告状态本身就是要求。
+
 ```bash
 python scripts/check_review.py <审稿意见.md>
 python scripts/check_review.py <期刊审稿/目录>     # 目录模式
+
+python scripts/manuscript_triage.py <稿件.md>
+python scripts/manuscript_triage.py <稿件.md> --type rct   # 或 observational/diagnostic/prediction
 ```
 
 ## 自检
