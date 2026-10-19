@@ -1,0 +1,73 @@
+{
+  "title": "同行评议 · 前置确认",
+  "intro": "以下事项决定审读重点、意见体例与交付范围。填写完成后提交，审稿据此展开。",
+  "questions": [
+    {
+      "id": "study_type",
+      "type": "radio",
+      "label": "研究类型",
+      "effect": "决定调用哪组领域核查。RCT 查随机化与盲法，观察性查混杂，诊断研究查金标准，ML 查数据泄漏与外部验证。",
+      "required": true,
+      "options": [
+        {"value": "随机对照试验"},
+        {"value": "观察性研究"},
+        {"value": "诊断准确性"},
+        {"value": "脑电 / 影像研究"},
+        {"value": "机器学习"},
+        {"value": "系统综述 / 荟萃分析"},
+        {"value": "其他"}
+      ]
+    },
+    {
+      "id": "format",
+      "type": "radio",
+      "label": "意见体例",
+      "effect": "决定输出结构。编号直述体过 check_review；MAJOR / MINOR 照期刊模板。",
+      "required": true,
+      "options": [
+        {"value": "编号直述体", "hint": "国内期刊常见"},
+        {"value": "MAJOR / MINOR", "hint": "国际期刊常见"},
+        {"value": "期刊指定模板"}
+      ]
+    },
+    {
+      "id": "focus",
+      "type": "multi",
+      "label": "本次重点",
+      "effect": "决定五层核查的权重。未勾选的层仍过一遍，但不展开。",
+      "required": true,
+      "options": [
+        {"value": "方法与设计"},
+        {"value": "统计与分析"},
+        {"value": "临床意义与可推广性"},
+        {"value": "报告规范与完整性"},
+        {"value": "伦理与利益冲突"}
+      ]
+    },
+    {
+      "id": "deadline",
+      "type": "radio",
+      "label": "审稿期限",
+      "effect": "决定三遍阅读的时间分配。期限短时只做整体扫描与方法学深审，跳过逐句挑错。",
+      "required": true,
+      "options": [
+        {"value": "三天内"},
+        {"value": "一周内"},
+        {"value": "两周以上"},
+        {"value": "未定"}
+      ]
+    },
+    {
+      "id": "deliverable",
+      "type": "radio",
+      "label": "本次交付范围",
+      "effect": "决定是否产出给编辑的保密意见。",
+      "required": true,
+      "options": [
+        {"value": "候选意见清单", "hint": "自己先过一遍，不提交"},
+        {"value": "正式审稿意见"},
+        {"value": "正式意见 + 给编辑的保密意见"}
+      ]
+    }
+  ]
+}
